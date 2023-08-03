@@ -34,3 +34,10 @@ db.inventory.insertMany( [
       $currentDate: { lastModified: true }
     }
  )
+
+
+//replaceOne
+db.inventory.replaceOne(
+   { item: "paper" },
+   { item: "paper", instock: [ { warehouse: "A", qty: 60 }, { warehouse: "B", qty: 40 } ] }
+)
